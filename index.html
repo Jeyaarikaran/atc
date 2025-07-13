@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angalaeswari Trading Company | Premium Chilli,Millet,Pulses,Cotton,Oilseeds, Corn & Coriander from Vilathikulam</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #d32f2f; /* Red theme */
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        
+        .logo span {
+            color: #ffeb3b;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #ffeb3b;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #ffeb3b;
+            color: #333;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #fbc02d;
+        }
+        
+        /* Products Section */
+        .products {
+            padding: 5rem 0;
+            background-color: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: #d32f2f;
+            margin-bottom: 1rem;
+        }
+        
+        .section-title p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .product-card {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .product-img {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .product-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .product-card:hover .product-img img {
+            transform: scale(1.1);
+        }
+        
+        .product-info {
+            padding: 1.5rem;
+        }
+        
+        .product-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #d32f2f;
+        }
+        
+        .product-info p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        .price {
+            font-weight: bold;
+            color: #d32f2f;
+            font-size: 1.2rem;
+        }
+        
+        /* About Section */
+        .about {
+            padding: 5rem 0;
+            background-color: #f5f5f5;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .about-img {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .about-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .about-text h2 {
+            font-size: 2rem;
+            color: #d32f2f;
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-text p {
+            margin-bottom: 1rem;
+            color: #555;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 5rem 0;
+            background-color: white;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+        
+        .contact-info h3 {
+            font-size: 1.5rem;
+            color: #d32f2f;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-info p {
+            margin-bottom: 1rem;
+            color: #555;
+        }
+        
+        .contact-info i {
+            margin-right: 0.5rem;
+            color: #d32f2f;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .contact-form textarea {
+            height: 150px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #d63117;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-col h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: #ffeb3b;
+        }
+        
+        .footer-col ul {
+            list-style: none;
+        }
+        
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-col ul li a {
+            color: #eee;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-col ul li a:hover {
+            color: #ffeb3b;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            margin-right: 1rem;
+            color: white;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: #ffeb3b;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+            }
+            
+            .logo {
+                margin-bottom: 1rem;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        
+            nav ul li {
+                margin: 0 0.5rem 0.5rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-img {
+                order: -1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">ANGALAESWARI TRADING COMPANY <span>VILATHIKULAM</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <h1>Premium Chilli,Millet,Pulses,Cotton,Oilseeds, Corn & Coriander</h1>
+            <p>Directly from our farms in Vilathikulam to your table. Pincode: 628907</p>
+            <a href="#products" class="btn">Explore Products</a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Premium Products</h2>
+                <p>We take pride in offering the highest quality agricultural products from Vilathikulam region.</p>
+            </div>
+            
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="muntuchilli.jpeg" alt="Mundu Chilli">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vilathikulam Mundu Chilli</h3>
+                        <p>Our signature product with perfect balance of heat and flavor. Grown in the fertile soils of Vilathikulam.</p>
+                        <p class="price">₹120 / kg</p>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="millets-1.jpg" alt="Millet">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vilathikulam pulses </h3>
+                        <p>Delivering premium grains with quality, care, and trust.</p>
+                        <p class="price">₹80-₹180 / kg</p>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="pulese.png" alt="pulses">
+                    </div>
+                    <div class="product-info">
+                        <h3>Fresh pulses</h3>
+                        <p>Angalaeswari Trading Company — delivering premium pulses with purity and care.</p>
+                        <p class="price">₹40-₹160 / kg</p>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="cotton.png" alt="Cotton">
+                    </div>
+                    <div class="product-info">
+                        <h3>Cotton</h3>
+                        <p>Angalaeswari Trading Company, we buy raw cotton straight from farmers.
+Bringing you natural, high-quality cotton with care and trust.</p>
+                        <p class="price">₹80 / kg</p>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="oil seeds.jpeg" alt="Oilseeds">
+                    </div>
+                    <div class="product-info">
+                        <h3>Oilseeds like sunflower, sesame  </h3>
+                        <p>Angalaeswari Trading Company — your trusted partner for farm-fresh oil seeds.
+Supporting farmers while providing the best quality to you.</p>
+                        <p class="price">₹80-₹180 / kg</p>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="corendiar.jpeg" alt="corendiar">
+                    </div>
+                    <div class="product-info">
+                        <h3> fresh corendiar </h3>
+                        <p> Angalaeswari Trading Company — delivering fresh, aromatic coriander directly from farmers.
+We bring you pure, flavorful seeds with natural goodness.</p>
+                        <p class="price">₹60 / kg</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Our Trading Story</h2>
+                    <p>Angalaeswari Trading Company was established in 1996. a mission to bring the finest agricultural products from Vilathikulam to markets across India.</p>
+                    <p>Located in the Vember road near taluk office of Vilathikulam (Pincode: 628907), we specialize in sourcing premium quality Chilli,Millet,Pulses,Cotton,Oilseeds, Corn & Coriander directly from local farmers who follow traditional farming methods.</p>
+                    <p>We maintain strict quality control at every stage - from farm selection to packaging and delivery. Our products are known for their authentic taste, vibrant color, and superior quality that meets both domestic and international standards.</p>
+                    <a href="#contact" class="btn">Contact for Bulk Orders</a>
+                </div>
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1586771107445-d3ca888129ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Our Trading Facility">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Have questions about our products or want to place bulk orders? We'd love to hear from you.</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p><i>📍</i> Angalaeswari Trading Company,Vember road near taluk office Vilathikulam - 628907</p>
+                    <p><i>📞</i> +91 9894734943, +91 9443433530, +91 9443872185 </p>
+                    <p><i>👑</i> SENTHIL KUMAR,PARASURAMAN,GURUNATHAN</p>
+                    <p><i>✉️</i> info@angalaeswaritradingcomapany.com</p>
+                    <p><i>⏰</i> Mon-Sat: 7.30AM - 9.30PM</p>
+                    
+                    <h3>Business Inquiries</h3>
+                    <p>We welcome bulk orders from retailers, wholesalers, and exporters. Contact us for competitive pricing and quality assurance.</p>
+                </div>
+                
+                <div class="contact-form">
+                    <form>
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <input type="text" placeholder="Business Name">
+                        <textarea placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn">Send Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>Angalaeswari Trading</h3>
+                    <p>Premium quality chilli, corn and coriander products from Vilathikulam, Tamil Nadu - 628907.</p>
+                    <div class="social-links">
+                        <a href="#"><i>📱</i></a>
+                        <a href="#"><i>📘</i></a>
+                        <a href="#"><i>📸</i></a>
+                        <a href="#"><i>🐦</i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Our Products</h3>
+                    <ul>
+                        <li><a href="#">Vilathikulam Mundu Chilli</a></li>
+                        <li><a href="#">Paddy</a></li>
+                        <li><a href="#">Millet</a></li>
+                        <li><a href="#">Pulses</a></li>
+                        <li><a href="#">Cotton</a></li>
+                        <li><a href="#">Oilseeds</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe for updates on new products and market prices.</p>
+                    <form>
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit" class="btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2020 Angalaeswari Trading Company, Vilathikulam - 628907. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
